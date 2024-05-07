@@ -1,39 +1,32 @@
 <mat-toolbar style="background-color: cyan">
-    <mat-toolbar-row>
-        <button mat-mini-fab  class="btn" (click)="sidenav.toggle()">
-            <mat-icon class="icon" >menu</mat-icon>
-        </button>     
-        
-        <h1>Reddit</h1>
-          
-        
-        <button mat-mini-fab class="btn" routerLink="/">
-            <mat-icon class="icon">home</mat-icon>
-            
-        </button>
-        <span class="example-spacer"></span>
-       
-        <app-search-bar></app-search-bar>
+  <mat-toolbar-row>
+    <button mat-mini-fab class="btn" (click)="collapsed.set(!collapsed())">
+      <mat-icon class="icon">menu</mat-icon>
+    </button>
 
-        <span class="example-spacer"></span>
-        <button mat-mini-fab class="btn">
-            <mat-icon class="icon">settings</mat-icon>
-        </button>
-        
-        <button class="btn" mat-mini-fab routerLink="/profilo">
-            <mat-icon class="icon">person</mat-icon>
-        </button>
+    <h1>Reddit</h1>
 
-    </mat-toolbar-row>
+    <button mat-mini-fab class="btn" routerLink="/" style="margin-left: 20px">
+      <mat-icon class="icon">home</mat-icon>
+    </button>
+    <span class="example-spacer"></span>
+
+    <app-search-bar></app-search-bar>
+
+    <span class="example-spacer"></span>
+
+    <button mat-stroked-button class="profile-btn" routerLink="/profilo">
+      nome utente
+      <mat-icon class="icon">person</mat-icon>
+    </button>
+  </mat-toolbar-row>
 </mat-toolbar>
 
-
-<mat-sidenav-container  autosize>
-    <mat-sidenav #sidenav  mode="side">
-     isi
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <router-outlet></router-outlet>
-    </mat-sidenav-content>
+<mat-sidenav-container>
+  <mat-sidenav opened mode="side" [style.width]="sidenavWidth()">
+    isi
+  </mat-sidenav>
+  <mat-sidenav-content [style.margin-left]="sidenavWidth()">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
 </mat-sidenav-container>
-  
