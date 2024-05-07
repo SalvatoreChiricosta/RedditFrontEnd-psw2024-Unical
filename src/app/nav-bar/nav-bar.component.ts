@@ -6,9 +6,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { ProfiloComponent } from '../profilo/profilo.component';
 import { HomeComponent } from '../home/home.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSelectModule} from '@angular/material/select';
-import {MatInputModule} from '@angular/material/input';
+import { SearchBarComponent } from '../search-bar/search-bar.component';
+
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
@@ -20,9 +19,8 @@ import {MatInputModule} from '@angular/material/input';
             RouterOutlet, 
             ProfiloComponent, 
             HomeComponent, 
-            MatFormFieldModule, 
-            MatSelectModule, 
-            MatInputModule],    
+            SearchBarComponent
+           ],    
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.css'
 })
