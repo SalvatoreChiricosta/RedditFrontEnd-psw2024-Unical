@@ -1,1 +1,28 @@
-<p>post works!</p>
+<div class="container">
+  <mat-card *ngFor="let post of posts">
+    <mat-card-header>
+      <div mat-card-avatar [style.background-image]="'url('+post.avatar+')'" class="image"></div>
+      <mat-card-title>{{ post.username }}</mat-card-title>
+    </mat-card-header>
+
+  
+    
+    <mat-card-content><p>{{ post.corpo }}</p></mat-card-content>
+    
+    <div *ngIf="post.foto ?? false" style="width: 10px; height: auto; margin-top: 20px; ">
+      <img mat-card-image src={{post.foto}} alt="Photo of a Shiba Inu">
+    </div>
+
+    <mat-card-actions>
+      <div class="actions">
+        <button mat-button (click)="voto(post)" class="like-button">
+          <mat-icon class="icon">arrow_upward</mat-icon>
+        </button>
+        <button mat-button (click)="notvoto(post)" class="like-button">
+          <mat-icon class="icon">arrow_downward</mat-icon>
+        </button>
+      </div>
+      <div class="text"><h1>{{ post.vote }}</h1></div>
+    </mat-card-actions>
+  </mat-card>
+</div>

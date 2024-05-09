@@ -8,6 +8,10 @@ import { ProfiloComponent } from '../profilo/profilo.component';
 import { HomeComponent } from '../home/home.component';
 import { SearchBarComponent } from '../search-bar/search-bar.component';
 
+import { MocService } from '../service/moc.service';
+import { generate } from 'rxjs';
+
+
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
@@ -26,8 +30,11 @@ import { SearchBarComponent } from '../search-bar/search-bar.component';
   styleUrl: './nav-bar.component.css',
 })
 export class NavBarComponent {
-  showFiller = false;
-
+  profile: any;
+  constructor(private mocservice:MocService){}
   collapsed = signal(false);
   sidenavWidth = computed(() => (this.collapsed() ? '80px' : '250px'));
+  ngOnInit(): void {
+    this.profile = this.mocservice.generateProfile();
+  }
 }
