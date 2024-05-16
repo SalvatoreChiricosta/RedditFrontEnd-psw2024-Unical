@@ -1,0 +1,35 @@
+.btn {
+    height: 40px;
+    margin-right: 20px;
+    background-color: blue;
+  }
+  
+  .profile-btn {
+    background-color: blue;
+    height: 40px;
+    border-radius: 20px;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .icon {
+    color: white;
+  }
+  
+  mat-sidenav-container {
+    height: calc(205vh - 115vh);
+  }
+  
+  mat-sidenav {
+    background-color: darkblue;
+  }
+  .anchored-div {
+    position: fixed;
+    top: 80;
+    right: 0;
+    margin-right: 20px;
+    width: 300px;
+    height: 300px;
+    background-color: transparent;
+    z-index: 1000;
+}

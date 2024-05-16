@@ -10,6 +10,7 @@ export class MocPostService {
     const post = [
       {
         username: 'grande uomo',
+        community: 'primo',
         corpo: 'grande scoperta alessia è stupida',
         vote: 0,
         avatar: 'https://material.angular.io/assets/img/examples/shiba1.jpg',
@@ -18,6 +19,7 @@ export class MocPostService {
 
       {
         username: 'grande omone',
+        community: 'primo',
         corpo: 'grande scoperta alessia è stupida',
         vote: 0,
         avatar: 'https://material.angular.io/assets/img/examples/shiba1.jpg',
@@ -25,6 +27,7 @@ export class MocPostService {
       },
       {
         username: 'omone',
+        community: 'primo',
         corpo: 'grande scoperta alessia è stupida',
         vote: 0,
         avatar: 'https://material.angular.io/assets/img/examples/shiba1.jpg',
@@ -33,6 +36,7 @@ export class MocPostService {
       },
       {
         username: 'omone',
+        community: 'primo',
         corpo: 'grande scoperta alessia è stupida',
         vote: 0,
         avatar: 'https://material.angular.io/assets/img/examples/shiba1.jpg',
